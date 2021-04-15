@@ -1,0 +1,16 @@
+module manquant : résolution : npm install 
+
+Fichier ascilog.txt pour voir le mdp admin lorsque le popup apparaitra.
+
+
+
+
+
+
+
+
+
+
+
+
+

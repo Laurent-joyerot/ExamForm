@@ -1,0 +1,50 @@
+extends layout
+
+block content
+
+	-data = data || {}
+
+	if errors
+		ul
+			for error in errors
+				li= error.msg
+
+	form(action="." method="POST" class="form-node-form")
+		div()
+		
+		label(for="name") Name:
+		input(
+			type="text"
+			id="name"
+			name="name"
+			class= "form-control"
+			value=data.name
+		)
+		
+		label(for="email") Email:
+		input(
+			type="email"
+			id="email"
+			name="email"
+			class="form-control"
+			value=data.email
+		)
+		label(for="message") Message :
+		textarea.form-control(
+			id = 'message'
+			name='message' 
+			required=''
+			placeholder='Votre message'
+			rows='3'
+			class="form-control"
+		)
+		
+		input(type="submit" value="Enregistrer" class="btn btn-lg btn-primary btn-block")
+		//- creation d'un bouton qui lorsque que l'on clic renvoie vers l'url localhost:3070/list
+		
+		
+		
+		
+		
+	
+

@@ -1,0 +1,30 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  meta(name='viewport', content='width=device-width, initial-scale=1.0')
+  title Formulaire de contact
+.navbar.navabar-inverse.navabar-fixed-top(role='navigation')
+  .container
+    .navbar-header
+      button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand(href='/', contact='')
+    .collapse.navbar-collapse
+      ul.nav.nabar-nav
+.container.main
+  form(role='form', action='/contact', methode='post')
+    .form-group
+      label(for='name') Name
+      input.form-control(type='text', name='name', required='', placeholder='Name please')
+    .form-group
+      label(for='email') Email
+      input.form-control(type='email', name='email', required='', placeholder='Email')
+    .form-group
+      label(for='message') Message
+      textarea.form-control(name='message', required='', placeholder='Votre message', rows='3')
+    button#submit.btn.btn-default(type='submit') Envoyer
+
