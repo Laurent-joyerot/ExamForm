@@ -1,0 +1,24 @@
+extends layout
+
+block content
+
+	-data = data || {}
+
+	if errors
+		ul
+			for error in errors
+				li= error.msg
+
+	form(action="." method="POST" class="form-node-form")
+		div()
+		
+		input(type="button" value="Admin" onclick="window.location.href='./list'" class="rainbow-button")
+		input(type="button" value="contact" onclick="window.location.href='./contacts'" class="rainbow-button")
+		//- creation d'un bouton qui lorsque que l'on clic renvoie vers l'url localhost:3070/list
+		
+		
+		
+		
+		
+	
+
